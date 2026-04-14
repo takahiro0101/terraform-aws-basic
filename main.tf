@@ -18,3 +18,11 @@ resource "aws_subnet" "public_1a" {
     Name = "${var.project_name}-public-1a"
   }
 }
+
+resource "aws_internet_gateway" "main" {
+  vpc_id = aws_vpc.main.id
+
+  tags = {
+    Name = "${var.project_name}-igw"
+  }
+}
