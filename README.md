@@ -1,18 +1,27 @@
 # terraform-aws-basic
 
-TerraformでAWSの基本インフラ（VPC）を構築するサンプルです。
+Terraformを用いてAWSの基本的なネットワーク構成（VPC）を構築するサンプルです。
 
 ## 構成
 - VPC（10.0.0.0/16）
-- Subnet（public）
+- Public Subnet（ap-northeast-1a）
 - Internet Gateway
+- Route Table
+- インターネット向けルート（0.0.0.0/0）
+- Route Table Association
 
-## 前提
-- AWS CLI設定済み
-- Terraformインストール済み
+※ EC2を配置すればインターネット接続可能な構成
+
+---
+
+## 対象
+- Terraformを学習中の方
+- AWS環境をコード化（IaC）したい方
+- 手動構築からTerraformへ移行したい方
+
+---
 
 ## 実行手順
-
 ```bash
 terraform init
 terraform plan
